@@ -6,20 +6,20 @@ Vehicle detection using CCTV and online Streaming
 This project is about detecting vehicles on the road using an IP CCTV camera. The raspberry Pi is used as a processing unit to capture frames from CCTV and upload them to AWS S3 cloud bucket  and AWS EC2 is used to process frames and  apply object detection using a Tflite model.
 The streaming is done by flask on the public ip provided by the cluster.
 
-Getting Started
+## Getting Started
 You should have your Raspbian software installed on the Raspberry pi with python 3.6+ Make a new working directory for this project in which code files and virtual environment will be present. Here it is named tflite.
 In EC2 cluster python 3.6+ is included with the Ubuntu cluster.
 
-1.Work to be done on AWS
-1.1 Creating a virtual environment
+## 1.Work to be done on AWS
+### 1.1 Creating a virtual environment
 Install the virtualenv library
 sudo pip3 install virtualenv
 
-create a environment named tflite-env inside the folder:
+### create a environment named tflite-env inside the folder:
 cd tflite
 python3 -m venv tflite-env
 
-To activate tflite-env:
+### To activate tflite-env:
 source tflite-env/bin/activate
 To deactivate env anytime:
 deactivate
