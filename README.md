@@ -24,7 +24,7 @@ source tflite-env/bin/activate
 To deactivate env anytime:
 deactivate
 
-1.2 Installing Required libraries:
+### 1.2 Installing Required libraries:
 1.2.1 OPENCV
 Get packages required for OpenCV
 sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
@@ -43,9 +43,9 @@ https://www.tensorflow.org/lite/guide/python
 pip3 install tensorflow
 
 For the installation of tflite runtime on pi
-if [ python version == "3.7" ], then
+- if [ python version == "3.7" ], then
 pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
-if [ python version == "3.6" ], then
+- if [ python version == "3.6" ], then
 pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_armv7l.whl
 
 1.2.3 FLASK
@@ -55,24 +55,24 @@ pip3 install Flask
 1.2.4 Boto3
 pip3 install boto3
 
-1.2.5 MYSQL
+### 1.2.5 MYSQL
 pip3 install mysql
 pip3 install sqlalchemy
 
-1.2.6 Some other libraries needed:
+### 1.2.6 Some other libraries needed:
 pip3 install numpy
 pip3 install pandas
 pip3 install pytz
 
-1.3 Installing AWS CLI on EC2:
+### 1.3 Installing AWS CLI on EC2:
 Version -2 for linux
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 
-1.4 Configure AWS CLI
+### 1.4 Configure AWS CLI
 
-Configure the default AWS CLI
+## Configure the default AWS CLI
 
 aws configure
 AWS Access Key ID [None]: XXXXXXXXXXXXXXXX
@@ -88,11 +88,11 @@ unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
 
 
 
-2.Work to be done on Raspberry Pi
+## 2.Work to be done on Raspberry Pi
 2.1 Creating a folder named Iot in home directory
 2.2 Libraries needed :- boto3, pytz , opencv,  numpy ,  pandas
 
-2.3 Installing AWS CLI on raspberry pi:
+### 2.3 Installing AWS CLI on raspberry pi:
 pip3 install awscli --upgrade --user
 
 Add AWS CLI executable to your Command Line Path
@@ -100,7 +100,7 @@ export PATH=/home/pi/.local/bin:$PATH
 
 
 
-2.4  Configure AWS CLI
+### 2.4  Configure AWS CLI
 
 Configure the default AWS CLI
 
@@ -112,7 +112,7 @@ Default output format [None]: json
 
 
 
-3.Description
+### 3.Description
 3.1 Pretrained model
 The model used in this approach is ssd_inception_v2 tflite model. This model is not quantized.
 3.2 Files
@@ -128,7 +128,7 @@ sample - folder containing models and labels
 3.4 Programs to be run on Pi:
 Botoserver.py
 
-4. Auto start Python script with Pi boot:
+## 4. Auto start Python script with Pi boot:
 
 If you need access to elements from the X Window System (e.g. you are making a graphical dashboard or game), then you will need to wait for the X server to finish initializing before running your code. One way to accomplish this is to use the autostart system.
 4.1 Create a .desktop File
@@ -150,7 +150,7 @@ sudo raspi-config command
 Save and exit with ctrl + x, followed by y when prompted to save, and then enter. Reboot with:
 sudo reboot
 
-4.3 How to Stop Your Program
+### 4.3 How to Stop Your Program
 If your program is running in the background, there might be no obvious way of halting it. You can always delete your .desktop files and restart, but that might take a while. A better option might be to kill the process associated with your program. In a terminal, enter the following:
 sudo ps -ax | grep python
 
@@ -158,7 +158,7 @@ ps -ax tells Linux to list out all the currently processes. We send that output
 sudo kill <PID>
 
 
-5.TMUX session
+## 5.TMUX session
 
 5.1  sudo apt-get install tmux
 
